@@ -1,17 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "358px",
+      md: "710px",
+      lg: "1260px",
+
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        bebasNeue: ["bebasNeue", "sans-serif"],
+        robotoCondensed: ["robotoCondensed", "sans-serif"],
+        robotoFlex:["robotoFlex", "sans-serif"]
       },
+      colors: {
+        secondTextColor: " #0147FF",
+        backgroundColor: "#F7F7F7",
+        mainTextColor: " #282828",
+      },
+
+      transitionDuration: {
+        DEFAULT: "300ms",
+      },
+      boxShadow: {},
     },
   },
   plugins: [],
